@@ -3,7 +3,7 @@ A python script to monitor the status of nodes.
 
 ## Pre-requisites
 * Python 3.6 installed on the node.
-* Virtualenv python module installed.
+* Virtualenv python module installed.[pip install virtualenv]
 
 ## How to install script on node.
 * Create a virtualenv in the home directory
