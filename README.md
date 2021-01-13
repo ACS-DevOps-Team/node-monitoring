@@ -13,7 +13,7 @@ code: python3 -m virtualenv <name of file e.g monitor>
 * Copy/move the monitor.service file to etc/systemd/system/
 * Replace "/home/<username>/<project_folder>/" in monitor.service with the virtualenv path.
 * Run the following systemctl commands.
-- systemctl daemon-reload
-- systemctl start monitor.service
-- systemctl enable monitor.service
+    - systemctl daemon-reload
+    - systemctl start monitor.service
+    - systemctl enable monitor.service
 * Run systemctl status monitor.service to confirm the status of the daemon.
