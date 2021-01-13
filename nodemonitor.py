@@ -5,11 +5,12 @@ load_dotenv()
 
 def main():
     
-    results = requests.get(os.environ.get("node_endpoint"), timeout=5)
+    node = os.environ.get("node_endpoint")
+    results = requests.get(node, timeout=5)
     try:
-        if results.status_code != 200:
-            notification("Server Down")
-            logerror("Server went down at " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + "\n")
+        if results.status_code == 200:
+            notification(f"{node} is down")
+            logerror(node+" went down at " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + "\n")
     except requests.exceptions.ConnectionError as httpError:
         notification(httpError)
     
