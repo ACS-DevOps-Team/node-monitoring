@@ -1,0 +1,10 @@
+[Unit]
+Description=Monitor a K8s node
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/<username>/<project_folder>/venv/bin/python3 /home/<username>/<project_folder>/nodemonitor.py
+Restart=always
