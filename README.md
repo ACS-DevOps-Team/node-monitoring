@@ -6,7 +6,7 @@ A python script to monitor the status of nodes.
 * Virtualenv python module installed.
 
 ## How to install script on node.
-* Create a virtualenv on in the home director
+* Create a virtualenv in the home directory
 code: python3 -m virtualenv <name of file e.g monitor>
 * Copy/move the nodemonitor.py script to the virtualenv created in step one.
 * Create a .env file in the root of the script file and add the following keypairs: webhook_url & node_endpoint.
